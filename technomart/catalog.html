@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="ru">
+<!--[if IE]>
+		  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	  <![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic&subset=cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,800,700italic&subset=cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<!--[if lt IE 7]>
+			<p class="browsehappy">Вы используете <strong>устаревший</strong> браузер . Пожалуйста <a href="http://browsehappy.com/"> обновите Ваш браузер</a> для улучшения отображения сайта.</p>
+		<![endif]-->
+<header>
+	<div class="container">
+		<div class="header-navbar">
+			<div class="header-logo"><a class="logo" href="index.html">Техномарт</a></div>
+			<div class="search">
+				<form>
+					<input type="text" value="Поиск" class="search-input">
+					<i class="icon-search"></i>
+				</form>
+			</div>
+			<ul class="header-links">
+				<li><a href=""><i class="icon-bookmark"></i>Закладки: 0</a></li>
+				<li class="basket basket_active"><a href=""><i class="icon-basket"></i>Корзина: 0</a></li>
+			</ul>
+			<div class="navbar-order"><a href="" class="order-btn">Оформить заказ</a></div>
+		</div>
+	</div>
+</header>
+<div class="under-header">
+	<div class="container">
+		<div class="row">
+			<div class="about">
+				<h1>Интернет-магазин<br> строительных материалов <br> и инстументов для ремонта</h1>
+			</div>
+			<div class="contact">
+				<a href="+7 (495) 555-05-55" class="contact-phone">
+					<i class="icon-phone"></i>+7 (495)  555-05-55
+				</a>
+				<p class="contact-adress">
+					Москва, ул. Строителей, д. 15
+				</p>
+			</div>
+			<div class="user user_entry">
+				<a class="user-cabinet" href="">
+					<i class="icon-user"></i> <span>Равшан Джамшутович</span><i class="icon-login"></i>
+				</a>
+				<div class="user-links">
+					<a href="" class="orders">Мои заказы</a>
+					<span></span>
+					<a href="" class="cabinet">Личный кабинет</a>
+				</div>
+			</div>
+		</div>
+		<ul class="nav nav-justified nav-main">
+			<li role="presentation" class="active"><a href="index.html">Главная</a></li>
+			<li role="presentation"><a href="#">Компания</a></li>
+			<li role="presentation"><a href="catalog.html">Каталог</a></li>
+			<li role="presentation"><a href="#">Новости</a></li>
+			<li role="presentation"><a href="#">Спецпредложение</a></li>
+			<li role="presentation"><a href="#">Доставка</a></li>
+			<li role="presentation"><a href="#">Контакты</a></li>
+		</ul>
+	</div>
+</div>
+<section class="content content-catalog">
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="#"><i class="icon-home"></i></a></li>
+			<li><a href="#">Каталог</a></li>
+			<li><a href="#">Инструмент</a></li>
+			<li class="active">Перфораторы</li>
+		</ol>
+		<div class="heading heading-mod">
+			<h2 class="heading-title">Перфораторы:</h2>
+		</div>
+		<div class="product">
+			<div class="product-filter">
+				<div class="product-filter__heading">
+					<h2 class="title">Фильтр:</h2>
+				</div>
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="panel">
+						<div class="panel-heading" role="tab" id="headingOne">
+							<h4 class="panel-title">
+								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									Цена:
+								</a>
+							</h4>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+							<div class="panel-body range-filter">
+								<div class="range-bg">
+									<div class="range-controls" id="slider">
+									</div>
+								</div>
+								<div class="price-controls">
+									<p class="value price-from"><input type="text" id="min-price" value="0" min="0" max="3000" pattern="[0-9]*"></p>
+
+									<p class="value price-to"><input type="text" id="max-price" value="3 000" min="0" max="5000" pattern="[0-9]*"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel">
+						<div class="panel-heading" role="tab" id="headingTwo">
+							<h4 class="panel-title">
+								<a  class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									Производители:
+								</a>
+							</h4>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							<div class="panel-body list-checked">
+								<ul>
+									<li class="disabled">
+										<input type="checkbox" id="cb1" disabled>
+										<label for="cb1">Интерскол</label>
+									</li>
+									<li>
+										<input type="checkbox" id="cb2">
+										<label for="cb2">Bosh</label>
+									</li>
+									<li>
+										<input type="checkbox" id="cb3">
+										<label for="cb3">Hitachi</label>
+									</li>
+									<li>
+										<input type="checkbox" id="cb4">
+										<label for="cb4">Hitachi</label>
+									</li>
+									<li>
+										<input type="checkbox" id="cb5">
+										<label for="cb5">Hitachi</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="panel">
+						<div class="panel-heading" role="tab" id="headingThree">
+							<h4 class="panel-title">
+								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+									Питание:
+								</a>
+							</h4>
+						</div>
+						<div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+							<div class="panel-body list-checked">
+								<ul>
+									<li class="disabled">
+										<input type="radio" id="cb6" disabled>
+										<label for="cb6">Аккумуляторное</label>
+									</li>
+									<li>
+										<input type="radio" id="cb7">
+										<label for="cb7">Сетевое</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="product-sorting">
+				<div class="sorting">
+					<div class="sorting-text">
+						<p class="sorting-title">Сортировка:</p>
+						<div class="sorting-list">
+							<a class="active" href="#">По цене</a>
+							<a href="#">По типу</a>
+							<a href="#">По функционалу</a>
+						</div>
+					</div>
+					<ul class="arrow">
+						<li><a  href="#"><i class="icon-up-dir active"></i></a></li>
+						<li><a  href="#"><i class="icon-down-dir"></i></a></li>
+					</ul>
+				</div>
+				<div class="product">
+					<div class="product-items">
+						<div class="item content-item">
+							<div class="item-block">
+								<div class="thumbnail">
+									<div class="product-hover">
+										<a href="#buy" class="btn-buy magnific-popup-buy"><i class="icon-basket"></i> Купить</a>
+										<a href="" class="btn-memory">В закладки</a>
+									</div>
+									<img src="img/snippet.png" height="112" width="127">
+									<div class="caption">
+										<h3>Перфоратор BOSCH <br>BFG 9000 </h3>
+										<p class="price">25 550 p.</p>
+										<p class="price_new">15 550 p.</p>
+									</div>
+								</div>
+							</div>
+							<div class="item-block">
+								<div class="thumbnail">
+									<div class="product-hover">
+										<a href="#buy" class="btn-buy magnific-popup-buy"><i class="icon-basket"></i> Купить</a>
+										<a href="" class="btn-memory">В закладки</a>
+									</div>
+									<img src="img/snippet.png">
+									<div class="caption">
+										<h3>Перфоратор BOSCH <br>BFG 9000 </h3>
+										<p class="price">25 550 p.</p>
+										<p class="price_new">15 550 p.</p>
+									</div>
+								</div>
+							</div>
+							<div class="item-block">
+								<div class="thumbnail">
+									<div class="product-hover">
+										<a href="#buy" class="btn-buy magnific-popup-buy"><i class="icon-basket"></i> Купить</a>
+										<a href="" class="btn-memory">В закладки</a>
+									</div>
+									<img src="img/snippet2.png">
+									<div class="caption">
+										<h3>Перфоратор BOSCH <br>BFG 9000 </h3>
+										<p class="price">25 550 p.</p>
+										<p class="price_new">15 550 p.</p>
+									</div>
+								</div>
+							</div>
+							<div class="item-block">
+								<div class="corner-new">new</div>
+								<div class="thumbnail">
+									<div class="product-hover">
+										<a href="#buy" class="btn-buy magnific-popup-buy"><i class="icon-basket"></i> Купить</a>
+										<a href="" class="btn-memory">В закладки</a>
+									</div>
+									<img src="img/snippet3.png">
+									<div class="caption">
+										<h3>Перфоратор BOSCH <br>BFG 9000 </h3>
+										<p class="price">25 550 p.</p>
+										<p class="price_new">15 550 p.</p>
+									</div>
+								</div>
+							</div>
+							<div class="item-block">
+								<div class="corner-new">new</div>
+								<div class="thumbnail">
+									<div class="product-hover">
+										<a href="#buy" class="btn-buy magnific-popup-buy"><i class="icon-basket"></i> Купить</a>
+										<a href="" class="btn-memory">В закладки</a>
+									</div>
+									<img src="img/snippet3.png">
+									<div class="caption">
+										<h3>Перфоратор BOSCH <br>BFG 9000 </h3>
+										<p class="price">25 550 p.</p>
+										<p class="price_new">15 550 p.</p>
+									</div>
+								</div>
+							</div>
+							<div class="item-block">
+								<div class="corner-new">new</div>
+								<div class="thumbnail">
+									<div class="product-hover">
+										<a href="#buy" class="btn-buy magnific-popup-buy"><i class="icon-basket"></i> Купить</a>
+										<a href="" class="btn-memory">В закладки</a>
+									</div>
+									<img src="img/snippet3.png">
+									<div class="caption">
+										<h3>Перфоратор BOSCH <br>BFG 9000 </h3>
+										<p class="price">25 550 p.</p>
+										<p class="price_new">15 550 p.</p>
+									</div>
+								</div>
+							</div>
+							<div class="item-block">
+								<div class="corner-new">new</div>
+								<div class="thumbnail">
+									<div class="product-hover">
+										<a href="#buy" class="btn-buy magnific-popup-buy"><i class="icon-basket"></i> Купить</a>
+										<a href="" class="btn-memory">В закладки</a>
+									</div>
+									<img src="img/snippet3.png">
+									<div class="caption">
+										<h3>Перфоратор BOSCH <br>BFG 9000 </h3>
+										<p class="price">25 550 p.</p>
+										<p class="price_new">15 550 p.</p>
+									</div>
+								</div>
+							</div>
+							<div class="item-block">
+								<div class="corner-new">new</div>
+								<div class="thumbnail">
+									<div class="product-hover">
+										<a href="#buy" class="btn-buy magnific-popup-buy"><i class="icon-basket"></i> Купить</a>
+										<a href="" class="btn-memory">В закладки</a>
+									</div>
+									<img src="img/snippet3.png">
+									<div class="caption">
+										<h3>Перфоратор BOSCH <br>BFG 9000 </h3>
+										<p class="price">25 550 p.</p>
+										<p class="price_new">15 550 p.</p>
+									</div>
+								</div>
+							</div>
+							<div class="item-block">
+								<div class="corner-new">new</div>
+								<div class="thumbnail">
+									<div class="product-hover">
+										<a href="#buy" class="btn-buy magnific-popup-buy"><i class="icon-basket"></i> Купить</a>
+										<a href="" class="btn-memory">В закладки</a>
+									</div>
+									<img src="img/snippet3.png">
+									<div class="caption">
+										<h3>Перфоратор BOSCH <br>BFG 9000 </h3>
+										<p class="price">25 550 p.</p>
+										<p class="price_new">15 550 p.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pagination-block">
+					<nav>
+						<ul class="pagination">
+							<li><a class="active" href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">Следующая</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="about-product">
+		<div class="container">
+			<div class="about-product-title">Пара слов о перфораторах</div>
+			<div class="about-product-text">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+				Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</div>
+			</div>
+	</div>
+</section>
+
+<div class="popup mfp-hide" id="buy">
+		<form>
+			<p class="product-buy">Товар добавлен в корзину!</p>
+			<div class="button-inner">
+				<a href="" class="btn-order">Оформить заказ</a>
+				<a href="" class="btn-more">Продолжить покупки</a>
+			</div>
+		</form>
+	</div>
+
+<footer class="footer" >
+	<div class="footer-top">
+		<div class="container">
+			<div class="footer-in">
+				<div class="footer-logo">
+					<a class="logo" href="index.html">Техномарт</a>
+					<p class="footer-adress">
+						Москва, ул. Строителей, д. 15
+					</p>
+					<a href="+7 (495) 555-05-55" class="footer-phone">
+						+7 (495) 555-05-55
+					</a>
+				</div>
+				<div class="footer-nav">
+					<ul class="list-inline footer-menu">
+						<li role="presentation"><a href="#">Компания</a></li>
+						<li role="presentation"><a href="#">Новости</a></li>
+						<li role="presentation"><a href="#">Каталог</a></li>
+						<li role="presentation"><a href="#">Доставка</a></li>
+
+					</ul>
+					<ul class="list-inline footer-menu--yellow">
+						<li role="presentation"><a href="#">Компания</a></li>
+						<li role="presentation"><a href="#">Новости</a></li>
+						<li role="presentation"><a href="#">Каталог</a></li>
+						<li role="presentation"><a href="#">Доставка</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="footer-bottom--inner">
+				<div class="list-col_copyright">
+					© 2010-2013 Компания «Техномарт» <br>Все права защищены
+				</div>
+				<div class="social">
+					<a href="#"><i class="icon-vk"></i></a>
+					<a href="#"><i class="icon-facebook"></i></a>
+					<a href="#"><i class="icon-instagramm"></i></a>
+				</div>
+				<div class="footer-links">
+					<p>Обратная связь:
+						<a href="">info@technomart.ru</a></p>
+						<p>Дизайн сайта —
+							<a href="">www.Glukhanko.ru</a></p>
+						</div>
+			</div>
+		</div>
+	</div>
+</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/libs.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

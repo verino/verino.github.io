@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'IstokWeb-Regular';
+  src: url('IstokWeb-Regular.woff2') format('woff2'),
+       url('IstokWeb-Regular.woff') format('woff'),
+       url('IstokWeb-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+

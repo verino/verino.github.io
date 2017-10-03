@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ru">
+<!--[if IE]>
+		  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	  <![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+<!--[if lt IE 7]>
+			<p class="browsehappy">Вы используете <strong>устаревший</strong> браузер . Пожалуйста <a href="http://browsehappy.com/"> обновите Ваш браузер</a> для улучшения отображения сайта.</p>
+		<![endif]-->
+<header>
+	<div class="container">
+		<div class="top-header">
+			<nav class="main">
+				<ul>
+					<li><a  class="active" href="index.html">Информация</a></li>
+					<li><a href="#">Фото и видео</a></li>
+					<li class="logo-inner">
+						<a class="logo" href="index.html">
+							<img src="img/logo.png"  alt="logo">
+						</a>
+					</li>
+					<li><a href="#">Карта штата</a></li>
+					<li><a href="catalog.html">Гостиницы</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+<div class="container header-under header-catalog">
+	<div class="hotels-type">
+		<div class="infrastructure">
+			<h3>Инфраструктура:</h3>
+			<ul>
+				<li class="disabled">
+					<input type="checkbox" id="cb1" disabled>
+					<label for="cb1">Бассейн</label>
+				</li>
+				<li>
+					<input type="checkbox" id="cb2">
+					<label for="cb2">Парковка</label>
+				</li>
+				<li>
+					<input type="checkbox" id="cb3">
+					<label for="cb3">Wi-Fi</label>
+				</li>
+			</ul>
+		</div>
+		<div class="property-type">
+			<h3>Тип жилья:</h3>
+			<ul>
+				<li class="disabled">
+					<input type="checkbox" id="cb4" disabled>
+					<label for="cb4">Гостиница</label>
+				</li>
+				<li>
+					<input type="checkbox" id="cb5">
+					<label for="cb5">Мотель</label>
+				</li>
+				<li>
+					<input type="checkbox" id="cb6">
+					<label for="cb6">Аппартаменты</label>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="range-filter">
+		<h3>Стоимость в сутки (Р):</h3>
+		<div class="price-controls">
+			<p class="value price-from">от<input type="text" id="min-price" value="0" min="0" max="3000" pattern="[0-9]*"></p>
+			<p class="value price-to">до<input type="text" id="max-price" value="3 000" min="0" max="5000" pattern="[0-9]*"></p>
+		</div>
+		<div class="range-controls" id="slider">
+		</div>
+	</div>
+</div>
+	<section class="content">
+		<div class="container">
+			<div class="sorting">
+				<div class="sorting-text">
+					<p class="results">Найдено: <span class="quantity">3</span></p>
+					<p class="sorting-title">Сортировка:</p>
+						<div class="sorting-list">
+							<a class="active" href="#">По цене</a>
+							<a href="#">По типу</a>
+							<a href="#">По рейтингу</a>
+						</div>
+				</div>
+				<ul class="arrow">
+					<li><a  href="#"><i class="icon-up-dir active"></i></a></li>
+					<li><a  href="#"><i class="icon-down-dir"></i></a></li>
+				</ul>
+			</div>
+			<div class="items-hotel">
+				<div class="item">
+					<div class="description-property">
+						<img class="hotel-img" src="img/img1.png" alt="">
+						<a class="title-hotel" hreh="#">Desert Quail Inn</a>
+						<p class="tipe">Гостиница</p>
+						<p class="price">ОТ 3500 Р</p>
+						<div class="btn-hotels">
+							<a href="" class="btn-more">Подробнее</a>
+							<a href="" class="btn-book">Забронировать</a></div>
+						</div>
+					<div class="rating">
+						<div class="rating__stars">
+							<i class="icon  icon-star"></i>
+							<i class="icon  icon-star"></i>
+							<i class="icon  icon-star"></i>
+							<i class="icon  icon-star"></i>
+							<i class="icon  icon-star"></i>
+							<span class="rating__text-hidden">5 звезд</span>
+						</div>
+						<div class="rating__count">Рейтинг: <span class="rating__value">8,5</span></div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="description-property">
+						<img class="hotel-img" src="img/img2.png" alt="">
+						<a  class="title-hotel"hreh="#">Desert Quail Inn</a >
+						<p class="tipe">Гостиница</p>
+						<p class="price">ОТ 3500 Р</p>
+						<div class="btn-hotels">
+							<a href="" class="btn-more">Подробнее</a>
+							<a href="" class="btn-book">Забронировать</a></div>
+						</div>
+					<div class="rating">
+						<div class="rating__stars">
+							<i class="icon  icon-star"></i>
+							<i class="icon  icon-star"></i>
+							<i class="icon  icon-star"></i>
+							<i class="icon  icon-star"></i>
+							<span class="rating__text-hidden">4 звезды</span>
+						</div>
+						<div class="rating__count">Рейтинг: <span class="rating__value">8,5</span></div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="description-property">
+						<img class="hotel-img" src="img/img3.png" alt="">
+						<a class="title-hotel" hreh="#">Desert Quail Inn</a>
+						<p class="tipe">Гостиница</p>
+						<p class="price">ОТ 3500 Р</p>
+						<div class="btn-hotels">
+							<a href="" class="btn-more">Подробнее</a>
+							<a href="" class="btn-book">Забронировать</a></div>
+						</div>
+					<div class="rating">
+						<div class="rating__stars">
+							<i class="icon  icon-star"></i>
+							<i class="icon  icon-star"></i>
+							<span class="rating__text-hidden">2 звезды</span>
+						</div>
+						<div class="rating__count">Рейтинг: <span class="rating__value">8,5</span></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<footer class="footer" >
+			<div class="container">
+				<div class="tag">#visitSedona</div class="tag">
+				<div class="social">
+					<a class="btn" href="#"><i class="icon-twitter"></i></a>
+					<a class="btn" href="#"><i class="icon-facebook"></i></a>
+					<a class="btn" href="#"><i class="icon-youtube"></i></a>
+				</div>
+				<div class="production">
+					<a href="#">website by <span class="logo-a"></span></a>
+					<a href="#">for <span class="logo-academy"></span></a>
+				</div>
+				</div>
+	
+			</div>
+		</footer>
+	<script type="text/javascript" src="js/libs.min.js"></script>
+	<script src="http://maps.google.com/maps/api/js?"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
