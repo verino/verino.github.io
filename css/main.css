@@ -1059,7 +1059,9 @@ body {
 }
 
 .works__effect {
-  background-color: #8449ae;
+  background-color: rgba(97, 62, 111, .87);
+  -webkit-box-shadow: 0 1px 2px 1px rgba(90, 89, 89, .3);
+  box-shadow: 0 1px 2px 1px rgba(90, 89, 89, .3);
   position: relative;
   overflow: hidden;
   min-width: 100%;
@@ -1071,24 +1073,14 @@ body {
 }
 
 .works__effect img {
-  opacity: .2;
+  opacity: 1;
   -webkit-transition: opacity .35s;
   transition: opacity .35s;
-  position: relative;
   display: block;
-  max-width: none;
-  min-width: auto;
-  min-height: auto;
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 
 .works__effect:hover img {
-  opacity: .4;
+  opacity: .2;
 }
 
 .works__effect:hover h3 {
@@ -1121,16 +1113,22 @@ body {
 }
 
 .works__descr h3 {
+  -webkit-transition: opacity .35s;
+  transition: opacity .35s;
+  opacity: 0;
   color: #fff;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  -webkit-transition: opacity .35s, -webkit-transform .35s;
-  transition: opacity .35s, -webkit-transform .35s;
-  transition: opacity .35s, transform .35s;
-  transition: opacity .35s, transform .35s, -webkit-transform .35s;
+  -webkit-transition: -webkit-transform .35s;
+  transition: -webkit-transform .35s;
+  transition: transform .35s;
+  transition: transform .35s, -webkit-transform .35s;
 }
 
 .works__descr p {
+  -webkit-transition: opacity .35s;
+  transition: opacity .35s;
+  opacity: 0;
   line-height: 1.2;
   text-transform: none;
   height: 76px;
@@ -1138,6 +1136,9 @@ body {
 }
 
 .works__descr a {
+  -webkit-transition: opacity .35s;
+  transition: opacity .35s;
+  opacity: 0;
   padding: 10px 0;
   border: 2px solid #fff;
   border-radius: 30px;
@@ -1156,6 +1157,12 @@ body {
 .works__descr a:hover {
   background-color: #f05f40;
   text-decoration: none;
+}
+
+.works__effect:hover h3,
+.works__effect:hover p,
+.works__effect:hover a {
+  opacity: 1;
 }
 
 .works__effect figcaption::before {
@@ -1215,9 +1222,11 @@ body {
   font-size: 16px;
   line-height: 2.5;
   font-weight: bold;
+  color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: "RalewayLight", sans-serif;
 }
 
 .skills ul i {
@@ -1269,12 +1278,21 @@ body {
   display: inline-block;
 }
 
+.social a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
 .social a:hover .icon-mail {
   color: #c00;
 }
 
 .social a:hover .icon-skype {
   color: #09c;
+}
+
+.social a:hover .icon-vkontakte {
+  color: #69c;
 }
 
 .social a:hover .icon-github {
@@ -1346,7 +1364,7 @@ body {
 
   .works__col {
     float: left;
-    width: 25%;
+    width: 50%;
   }
 
   .social li {
