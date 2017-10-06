@@ -1,17 +1,12 @@
 $(function() {
 
 // map
-var map;
 
 function initMap() {
-  var coordinates = {lat: 34.8661349, lng: -111.7578885},
-  zoom = 15,
-
-
-
-  map = new google.maps.Map(document.getElementById('map-canvas'), {
-    center: coordinates ={lat: 34.8724375,lng: -111.760678},
-    scrollwheel: false,
+  var map = new google.maps.Map(document.getElementById('map-canvas'), {
+    center: {lat: 34.8724375,lng: -111.760678},
+    zoom :15,
+    scrollwheel: false
   });
 }
 
