@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
 // map
 function initialize() {
@@ -69,6 +69,8 @@ $('.search-form-plus').on('click',function(event) {
   });
 
 });
+
+
 (function($){
 // range slider
 
