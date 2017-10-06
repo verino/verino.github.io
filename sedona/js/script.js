@@ -1,3 +1,4 @@
+$(document).ready(function() {
 // map
 function initialize() {
   var mapOptions = {
@@ -18,23 +19,22 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 // datepicker
-$(document).ready(function() {
+
     $( '#checkout' ).datepicker(
       { dateFormat: 'd MM yy' }
       );
     $( '#checkin' ).datepicker(
       { dateFormat: 'd MM yy' }
       );
-  });
+
 
 // popup
-$(document).ready(function() {
+
   $('.magnific-popup').magnificPopup({
       type:'inline',
       midClick: true,
     }
     );
-});
 
 // input value
 $('.search-form-minus').on('click',function(event) {
@@ -102,3 +102,4 @@ slider.noUiSlider.on('update', function( values, handle ) {
 valueInputMax.addEventListener('change', function(){
   slider.noUiSlider.set([null, this.value]);
 });
+  });
