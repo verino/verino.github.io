@@ -2,13 +2,23 @@ $(function() {
 
 // map
 
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('map-canvas'), {
-    center: {lat: 34.8724375,lng: -111.760678},
-    zoom :15,
-    scrollwheel: false
+function initialize() {
+  var mapOptions = {
+    zoom: 15,
+    scrollwheel: false,
+    center: new google.maps.LatLng(34.8724375,-111.760678)
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+    mapOptions);
+  // var image = "../img/company.png";
+  var myLatLng = new google.maps.LatLng(34.8661349,-111.7578885);
+  var beachMarker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    // icon: image
   });
 }
+google.maps.event.addDomListener(window, 'load', initialize);
 
 // datepicker
 
