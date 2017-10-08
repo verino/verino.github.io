@@ -570,6 +570,7 @@ img.mfp-img {
     right: 15px;
     bottom: 15px;
     height: 64px;
+    cursor: pointer;
     max-width: 300px;
     overflow: hidden;
     color: #eee;
