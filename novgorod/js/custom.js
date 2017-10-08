@@ -1,14 +1,3 @@
-function initialize() {
-  var mapOptions = {
-    zoom: 17,
-    scrollwheel: false,
-    center: new google.maps.LatLng(45.0449347,38.9384259)
-  }
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
-    mapOptions);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-
 $(document).ready(function() {
 // popup
 $('.magnific-popup').magnificPopup({
@@ -21,8 +10,74 @@ $('.magnific-popup').magnificPopup({
     slidesToShow: 3,
     slidesToScroll: 3,
     arrows: true,
-    dots: true
+    dots: true,
+    autoplay: true,
+  autoplaySpeed: 4000,
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
   });
+
+  $('.partners__slider').slick({
+  arrows: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 6,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
   // fixed nav
     var headerH = $("#js-header").height(),
     navH = $("#js-nav").innerHeight();
@@ -35,18 +90,16 @@ $('.magnific-popup').magnificPopup({
         "zIndex": "200",
         "width": "100%" 
       });
-      $("#js-header").css({
+      $(".under-header").css({
         "marginTop": navH,
       });
-
     } else {
-      $("#js-nav").css({
-        "position": "",
-        "top":"",
-        "zIndex": "",
-        "width": ""
-      });
-      $("#js-header").removeAttr("style");
+      $("#js-nav").removeAttr("style");
+      $(".under-header").removeAttr("style");
     }
   });
+  
+//parallax
+$('.parallax-window').parallax();
+
 });

@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* --------- centered --------- */
+/* --------- responsive mixins --------- */
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
@@ -553,22 +555,53 @@ img.mfp-img {
 
 /* SLICK-SLIDER */
 .carousel {
-  text-align: center; }
-  .carousel-item {
-    position: relative; }
-  .carousel-text {
+  padding-top: 60px; }
+  .carousel__item {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; }
+  .carousel__text {
     position: absolute;
-    top: 80px;
-    width: 300px;
-    color: #000;
-    margin-bottom: 30px; }
-  .carousel-photo {
+    padding: 5px 10px;
+    background-color: #253876;
+    right: 15px;
+    bottom: 15px;
+    height: 64px;
+    max-width: 300px;
+    overflow: hidden;
+    color: #eee;
+    font-size: 12px;
+    margin-bottom: 0; }
+    @media screen and (max-width: 768px) {
+      .carousel__text {
+        height: 60px; } }
+    @media screen and (max-width: 480px) {
+      .carousel__text {
+        height: 55px;
+        right: 5px; } }
+    .carousel__text:hover {
+      text-decoration: none;
+      color: rgba(238, 238, 238, 0.5); }
+    .carousel__text h4 {
+      display: inline;
+      margin-right: 5px;
+      font-size: 14px;
+      font-weight: bolder;
+      color: #f53c50; }
+  .carousel__photo {
     margin-bottom: 20px; }
-  .carousel-photo img {
-    width: 100%; }
-  .carousel-author {
-    color: #5e5e5e;
-    font-size: 12px; }
+  .carousel__photo img {
+    max-width: none;
+    min-width: auto;
+    min-height: auto;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 /* Icons */
 @font-face {
@@ -582,22 +615,25 @@ img.mfp-img {
   text-align: center; }
 
 .slick-prev {
-  left: 0; }
+  left: 10px; }
 
 .slick-next {
-  right: 0; }
+  right: 10px; }
 
 .slick-prev, .slick-next,
 .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
-  color: rgba(0, 0, 0, 0.5);
+  color: #253876;
   z-index: 20; }
 
 .slick-prev:before,
 .slick-next:before {
-  color: rgba(0, 0, 0, 0.5); }
+  color: #253876;
+  font-size: 25px; }
 
 .slick-dots li button:before {
-  font-size: 10px; }
+  margin-top: 10px;
+  font-size: 14px;
+  color: #253876; }
 
 .fade {
   opacity: 0;
@@ -874,9 +910,3 @@ tbody.collapse.in {
     border-right-width: 0;
     border-left-color: #fff;
     bottom: -10px; }
-
-.fixed {
-  position: fixed;
-  top: 0;
-  z-index: 200;
-  width: 100%; }
