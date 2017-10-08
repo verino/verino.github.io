@@ -842,13 +842,13 @@ img {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-left: 0;
   margin-top: 15px;
   color: #253876;
   font-weight: bold;
   font-size: 15px;
   line-height: 1.5;
   text-transform: uppercase;
-  padding-left: 0;
 }
 
 .intro__contacts {
@@ -1534,21 +1534,17 @@ h1 {
 
   .intro__logo {
     float: left;
-    width: 20.83333%;
+    width: 29.16667%;
   }
 
   .intro__about {
     float: left;
-    width: 50%;
-  }
-
-  .intro__contacts {
-    margin-left: 8.33333%;
+    width: 70.83333%;
   }
 
   .intro__contacts {
     float: left;
-    width: 41.66667%;
+    width: 50%;
   }
 
   .intro__tel {
