@@ -76,6 +76,11 @@ input {
   line-height: normal;
 }
 
+input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
 textarea {
   overflow: auto;
 }
@@ -283,6 +288,24 @@ label {
   font-weight: bold;
 }
 
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+
+input[type="checkbox"]:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .btn {
   display: inline-block;
   margin-bottom: 0;
@@ -327,6 +350,10 @@ label {
   display: none;
 }
 
+.collapse.in {
+  display: block;
+}
+
 .caret {
   display: inline-block;
   width: 0;
@@ -366,23 +393,6 @@ label {
   border-radius: 4px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
   background-clip: padding-box;
-}
-
-.dropdown-menu>li>a {
-  display: block;
-  padding: 3px 20px;
-  clear: both;
-  font-weight: normal;
-  line-height: 1.42857;
-  color: #333;
-  white-space: nowrap;
-}
-
-.dropdown-menu>li>a:hover,
-.dropdown-menu>li>a:focus {
-  text-decoration: none;
-  color: #262626;
-  background-color: #f5f5f5;
 }
 
 .nav {
@@ -550,6 +560,67 @@ label {
   margin-bottom: 0;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
+}
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.panel-body {
+  padding: 15px;
+}
+
+.panel-body:before,
+.panel-body:after {
+  content: " ";
+  display: table;
+}
+
+.panel-body:after {
+  clear: both;
+}
+
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: inherit;
+}
+
+.panel-title>a {
+  color: inherit;
+}
+
+.panel-group {
+  margin-bottom: 20px;
+}
+
+.panel-group .panel {
+  margin-bottom: 0;
+  border-radius: 4px;
+}
+
+.panel-group .panel+.panel {
+  margin-top: 5px;
+}
+
+.panel-group .panel-heading {
+  border-bottom: 0;
+}
+
+.panel-group .panel-heading+.panel-collapse>.panel-body {
+  border-top: 1px solid #ddd;
 }
 
 .carousel {
@@ -773,6 +844,10 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
+.intro {
+  background: rgba(243, 241, 237, .51);
+}
+
 .intro__top {
   padding: 15px 0;
   height: 500px;
@@ -844,9 +919,10 @@ img {
   padding-right: 15px;
   padding-left: 0;
   margin-top: 15px;
-  color: #253876;
+  color: #0d358d;
+  text-shadow: 1px 1px #fff, -1px 1px #fff, 1px -1px #fff, -1px -1px #fff;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.5;
   text-transform: uppercase;
 }
@@ -884,8 +960,8 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   padding: 0;
-  color: #fff;
-  text-shadow: 1px 1px #c1182a, -1px 1px #c1182a, 1px -1px #c1182a, -1px -1px #c1182a;
+  color: #c1182a;
+  text-shadow: 1px 1px #fff, -1px 1px #fff, 1px -1px #fff, -1px -1px #fff;
   font-size: 25px;
   margin-top: 25px;
   text-transform: uppercase;
@@ -1017,16 +1093,6 @@ img {
   background-color: #253876;
 }
 
-.dropdown-menu>li>a {
-  color: #fff;
-}
-
-.dropdown-menu>li>a:hover,
-.dropdown-menu>li>a:focus {
-  background-color: #1c2d63;
-  color: #e8384b;
-}
-
 /* PAGE-HEADER */
 
 .under-header {
@@ -1076,6 +1142,7 @@ h1 {
   text-align: center;
   background-color: #c1182a;
   padding: 10px 15px;
+  min-height: 105px;
 }
 
 .services__col li:first-child:before {
@@ -1158,6 +1225,28 @@ h1 {
   padding-right: 15px;
 }
 
+.services__row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.services__col {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
 .advantages .thumbnail-col {
   position: relative;
   min-height: 1px;
@@ -1177,6 +1266,7 @@ h1 {
 
 .list-group {
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .questions {
@@ -1263,6 +1353,7 @@ h1 {
 }
 
 .footer .intro__tel {
+  color: #c1182a;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1412,6 +1503,85 @@ h1 {
 
 .popup input[type="reset"] {
   margin-left: 20px;
+}
+
+.dropdown-accordion .panel-heading {
+  padding: 0;
+}
+
+.dropdown-accordion .panel-heading a {
+  display: block;
+  padding: 10px 15px;
+}
+
+.panel-group {
+  margin-bottom: 0;
+}
+
+.panel {
+  background-color: #1c2d63;
+  border-radius: none;
+  margin: 0;
+}
+
+.panel ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.panel-title span {
+  margin-left: 10px;
+}
+
+.panel-body {
+  padding: 10px;
+}
+
+.panel-body a {
+  display: block;
+  line-height: 1.8;
+  font-size: 12px;
+}
+
+.panel-group .panel+.panel {
+  margin-top: 0;
+}
+
+.dropdown-menu {
+  min-width: 250px;
+  padding: 0;
+}
+
+.dropdown-menu a:hover {
+  text-decoration: none;
+}
+
+.dropdown-accordion .panel-heading a {
+  padding: 5px 15px;
+}
+
+.disabled__btn {
+  pointer-events: none;
+  background-color: #a2898c;
+  border-color: #a2898c;
+}
+
+#link:checked~.disabled__btn {
+  pointer-events: auto;
+  background-color: #c1182a;
+  border-color: #c1182a;
+}
+
+#link:checked~.disabled__btn:hover {
+  background-color: #fff;
+}
+
+label.checkbox {
+  margin-left: 10px;
+  padding-bottom: 0;
+  display: inline-block;
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -1564,7 +1734,7 @@ h1 {
 
   .thumbnail-row .thumbnail-col {
     float: left;
-    width: 25%;
+    width: 33.33333%;
   }
 
   .advantages .thumbnail-col {
@@ -1613,8 +1783,7 @@ h1 {
 
 @media screen and (max-width: 480px) {
   .intro__about {
-    color: #fff;
-    text-shadow: 1px 1px #c1182a, -1px 1px #c1182a, 1px -1px #c1182a, -1px -1px #c1182a;
+    font-size: 16px;
   }
 
   .intro__pop-up {
@@ -1627,6 +1796,14 @@ h1 {
 
   .services__logo {
     display: none;
+  }
+
+  .navbar-nav a {
+    font-size: 15px;
+  }
+
+  .navbar-nav {
+    line-height: 21px;
   }
 
   h1 {
@@ -1647,6 +1824,15 @@ h1 {
 
   .popup input[type="reset"] {
     margin-left: 0;
+  }
+
+  .panel-body a {
+    font-size: 12px;
+  }
+
+  .panel-body {
+    height: 100px;
+    overflow-y: scroll;
   }
 }
 
