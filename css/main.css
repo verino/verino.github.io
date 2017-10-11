@@ -1059,7 +1059,7 @@ body {
 }
 
 .works__effect {
-  background-color: rgba(97, 62, 111, .87);
+  background: rgba(97, 62, 111, .87) url(../img/pattern.png) 0 0 repeat;
   -webkit-box-shadow: 0 1px 2px 1px rgba(90, 89, 89, .3);
   box-shadow: 0 1px 2px 1px rgba(90, 89, 89, .3);
   position: relative;
@@ -1077,6 +1077,9 @@ body {
   -webkit-transition: opacity .35s;
   transition: opacity .35s;
   display: block;
+  max-width: none;
+  min-width: auto;
+  min-height: auto;
 }
 
 .works__effect:hover img {
@@ -1364,7 +1367,7 @@ body {
 
   .works__col {
     float: left;
-    width: 50%;
+    width: 33.33333%;
   }
 
   .social li {
