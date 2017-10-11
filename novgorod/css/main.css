@@ -1567,13 +1567,17 @@ h1 {
   border-color: #a2898c;
 }
 
-#link:checked~.disabled__btn {
+#link:checked~.disabled__btn,
+#link2:checked~.disabled__btn,
+#link3:checked~.disabled__btn {
   pointer-events: auto;
   background-color: #c1182a;
   border-color: #c1182a;
 }
 
-#link:checked~.disabled__btn:hover {
+#link:checked~.disabled__btn:hover,
+#link2:checked~.disabled__btn:hover,
+#link3:checked~.disabled__btn:hover {
   background-color: #fff;
 }
 
