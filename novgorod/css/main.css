@@ -1136,6 +1136,9 @@ h1 {
 .services__col li {
   background-color: #fff;
   padding: 0;
+  border: none;
+  margin-bottom: 0;
+  border-bottom: 1px solid #ddd;
 }
 
 .services__col li:first-child {
@@ -1143,6 +1146,7 @@ h1 {
   background-color: #c1182a;
   padding: 10px 15px;
   min-height: 105px;
+  border-radius: 0;
 }
 
 .services__col li:first-child:before {
@@ -1153,6 +1157,10 @@ h1 {
   padding: 10px 15px;
   background-color: #c1182a;
   transition: none;
+}
+
+.services__col li:last-child {
+  border-radius: 0;
 }
 
 .services__col li:hover {
@@ -1267,6 +1275,8 @@ h1 {
 .list-group {
   margin-bottom: 30px;
   width: 100%;
+  border: 1px solid #ddd;
+  border-bottom-width: 2px;
 }
 
 .questions {
