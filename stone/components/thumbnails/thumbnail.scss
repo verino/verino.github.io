@@ -1,0 +1,9 @@
+/* THUMBNAIL */
+.thumbnail-row{
+    // @include row-susy;
+    @include clearfix;
+    margin-top: 20px;
+    .thumbnail-col{
+     // @include span(3);
+	}
+}

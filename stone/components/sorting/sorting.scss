@@ -1,0 +1,59 @@
+/* SORTING */
+.sorting{
+  padding-top: 30px;
+  p,ul,li{
+    display: inline-block;
+    margin-top: 0;
+  }
+  .sorting-text{
+    width: 90%;
+    display: inline-block;
+  }
+  .results{
+    margin-right: 50px;
+  }
+  .sorting-title{
+    margin-right: 40px;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .results{
+    font-size: 21px;
+    font-weight: bold;
+  }
+}
+
+.sorting-list{
+  display: inline-block;
+  a{
+    font-size: 12px;
+    margin-right: 30px;
+    text-decoration: none;
+    @include linkborder($color-primary, $color-primary, $color-primary ,$sorting, $black, $color-primary ,$bdstyle, $bdstyleh, $bdstyleh);
+    border-bottom: 1px dotted $color-primary;
+    &:focus{
+      border-bottom:none;
+    }
+    &.active{
+      color:$color-primary;
+      border-bottom: none;
+    }
+  }
+}
+
+.arrow{
+  @include list-clear;
+  i{
+    color:#c4c1bb;
+    font-size: 18px;
+    &:hover{
+      color: #000;
+    }
+    &.active{
+      color:$color-primary;
+      &:hover{
+        color: #000;
+      }
+    }
+  }
+}

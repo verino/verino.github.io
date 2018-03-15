@@ -1,0 +1,38 @@
+/* NAV-SIMPLE*/
+.header__nav{
+  ul{
+    margin: 0;
+    padding: 0;
+      @include list-clear;
+      padding: 0 20px;
+      line-height: 90px;
+      margin-left: 0;
+      margin-right: 0;
+      display: flex;
+      padding: 0;
+      li{
+        flex-grow:1;
+        flex-basis:0;
+        margin: 0;
+        padding: 0;
+      }
+      a{
+        color: #fff;
+        font-size: 1.125rem;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        transition: all .5s ease-in-out .1s;
+        &:hover{
+          text-decoration: none;
+          background-color: darken(#698bc7, 10%);
+
+
+        }
+        &:focus{
+          @include opacity(.6);
+
+        }
+      }
+    }
+  }

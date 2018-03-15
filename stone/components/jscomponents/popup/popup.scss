@@ -1,0 +1,84 @@
+/* POP-UP */
+.popup{
+  @include box-shadow( 0, 20px, 40px, rgba(0,1,1,.75) );
+  max-width: 630px;
+  min-height: 285px;
+  padding: 50px 80px 10px;
+  background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+  border-top: 7px solid $color-primary;
+  border-bottom: 112px solid #f1f1f1;
+  
+  .user-data{
+    @include clearfix;
+    input[type="text"],
+    input[type="tel"]{
+    border: 2px solid #d7dbdd;
+    background-color: #fff;
+    width: 220px;
+    height: 35px;
+    font-size: 11px;
+    color: #000;
+    font-weight: normal;
+    padding: 0 10px;
+    line-height: 34px;
+    margin-bottom: 20px;
+    &:hover{
+      border-color:#a1a9ac;
+    }
+    &:focus{
+      border-color: #56befb;
+    }
+  }
+    }
+  .user-name{
+    margin-right: 20px;
+    float: left;
+  }
+  .user-email{
+    float: left;
+  }
+  label{
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    display: block;
+    padding-bottom: 10px;
+    text-transform: none;
+  }
+  textarea{
+    width: 460px;
+    display: block;
+    height: 110px;
+    padding: 10px;
+    border: 2px solid #d7dbdd;
+    background-color: #fff;
+    color: #000;
+    font-family: "OpenSans", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  input[type="submit"],
+  input[type="reset"]{
+    border:none;
+    margin-top: 20px;
+    padding: 0 75px;
+    min-width: 120px;
+    @extend %btn;
+    @extend %btn-primary;
+    @extend %btn-normal;
+  }
+
+  input[type="reset"]{
+    margin-left: 20px;
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.button-inner{
+  position: absolute;
+  bottom: -80px;
+}

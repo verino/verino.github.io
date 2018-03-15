@@ -1,0 +1,50 @@
+/* SLICK-SLIDER */
+.carousel {
+    padding-top: 60px;
+    text-align: center;
+
+    &-text {
+        color: #000;
+        margin-bottom: 30px;
+    }
+
+    &-photo {
+        margin-bottom: 20px;
+    }
+
+    &-photo img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    &-author {
+        color: #5e5e5e;
+        font-size: 12px;
+    }
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../font/slick.eot');
+    src: url('../font/slick.eot?#iefix') format('embedded-opentype'), url('../font/slick.woff') format('woff'), url('../font/slick.ttf') format('truetype'), url('../font/slick.svg#slick') format('svg');
+}
+.slick-slide img
+{
+    display: inline-block;
+}
+.slick-prev, .slick-next,
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus{
+    background-color: #fff;
+    color:#000;
+}
+.slick-prev:before, .slick-next:before{
+    color: #000;
+}
+.slick-dots li button:before{
+    font-size: 16px;
+}

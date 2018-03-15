@@ -1,0 +1,583 @@
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+@mixin box-sizing($boxmodel) {
+ -webkit-box-sizing: $boxmodel;
+ -moz-box-sizing: $boxmodel;
+ box-sizing: $boxmodel;
+}
+
+@mixin img-responsive($display: block) {
+  display: $display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+
+@mixin tab-focus() {
+  // Default
+  outline: thin dotted;
+  // WebKit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+// nav
+@mixin navlink{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0;
+    padding-bottom: 5px;
+    @include transition;
+    &:hover{
+      color: $nav-hover;
+      text-decoration: none;
+    }
+    &:active{
+      color: $nav-focus;
+    }
+    &.active{
+      border-bottom: 2px solid #EB565C;
+    }
+}
+
+@mixin nav-divider($color: #e5e5e5) {
+  height: 1px;
+  margin: (($line-height-computed / 2) - 1) 0;
+  overflow: hidden;
+  background-color: $color;
+}
+
+@mixin link ($normal, $hover, $focus, $opacity: "") {
+  @if ($opacity != "") {
+    & {
+      color: $normal;
+      &:hover {
+        color: $hover;   
+      }
+      &:focus {
+        color: $normal;
+        @include opacity($opacity);
+      }
+    }
+  }
+  @else {
+    & {
+      color: $normal;
+      &:hover {
+        color: $hover;   
+      }
+      &:focus {
+        color: $focus;
+      }
+    }
+  }
+}
+
+@mixin bg-variant( $bg-color, $bg-hover, $bg-focus , $opacity: "") {  
+  @if ($opacity != "") {
+    & {
+      background-color: $bg-color;
+    }
+    &:hover{
+      background-color: $bg-hover;
+    }
+    &:focus {
+      background-color: $bg-focus;
+      @include opacity($opacity);
+    }
+  }
+  @else {
+    & {
+      background-color: $bg-color;
+    }
+    &:hover{
+      background-color: $bg-hover;
+    }
+    &:focus {
+      background-color: $bg-focus;
+    }
+  }
+}
+
+@mixin border-color ($normal, $hover, $focus, $opacity: "") {
+  @if ($opacity != "") {
+    & {
+      border-color: $normal;
+      &:hover {
+        border-color: $hover;
+      }
+      &:focus {
+        border-color: $normal;
+        @include opacity($opacity);
+      }
+    }
+  }
+  @else {
+    & {
+      border-color: $normal;
+      &:hover {
+        border-color: $hover;
+      }
+      &:focus {
+        border-color: $focus;
+      }
+    }
+  }
+}
+
+@mixin linkborder( $bd-color, $bd-hover, $bd-focus,$normal, $hover, $focus,$bdst-color, $bdst-hover, $bdst-focus) {
+  & {
+    color:$normal;
+    border-bottom: 1px $bd-color $bdst-color;
+  }
+  &:hover{
+    color: $hover;
+    border-bottom: 1px $bd-hover $bdst-hover;
+
+  }
+  &:focus {
+    color: $focus;
+    border-bottom: 1px $bd-focus $bdst-focus;
+  }
+}
+
+@mixin tdn(){
+  &:hover,
+  &:focus{
+    text-decoration: none;
+  }
+}
+
+@mixin list-clear() {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin placeholder($color:  #000, $font-weight:normal, $text-transform: none) {
+  ::-moz-placeholder {
+    color: $color;
+    font-weight: $font-weight;
+    text-transform: $text-transform;
+    opacity: 1; // See https://github.com/twbs/bootstrap/pull/11526
+  }
+  :-ms-input-placeholder {
+    color: $color;
+    font-weight: $font-weight;
+    text-transform: $text-transform;
+  }
+  ::-webkit-input-placeholder {
+    color: $color;
+    font-weight: $font-weight;
+    text-transform: $text-transform;
+  }
+}
+
+@mixin text-overflow {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+@mixin background-gradient($startColor: #3C3C3C, $endColor: #999999) {
+    background-color: $startColor;
+    background-image: linear-gradient(top, $startColor, $endColor);
+}
+
+@mixin background-horizontal($startColor: #3C3C3C, $endColor: #999999) {
+    background-color: $startColor;
+    background-image: linear-gradient(left, $startColor, $endColor);
+}
+
+@mixin background-radial($startColor: #FFFFFF, $startPos: 0%, $endColor: #000000, $endPos:100%) {
+    background: radial-gradient(ellipse at center, $startColor $startPos,$endColor $endPos);
+}
+
+@mixin background-opacity($color: #000, $opacity: 0.85) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+@mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
+  background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+  background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+}
+
+@mixin border-radius-separate($topLeftRadius: 5px, $topRightRadius: 5px, $bottomLeftRadius: 5px, $bottomRightRadius: 5px) {
+  border-top-left-radius:     $topLeftRadius;
+  border-top-right-radius:    $topRightRadius;
+  border-bottom-right-radius: $bottomRightRadius;
+  border-bottom-left-radius:  $bottomLeftRadius;
+}
+
+@mixin border-top-radius($radius) {
+  border-top-right-radius: $radius;
+   border-top-left-radius: $radius;
+}
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+     border-top-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+   border-bottom-left-radius: $radius;
+}
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+     border-top-left-radius: $radius;
+}
+
+@mixin box-rgba($r: 60, $g: 3, $b: 12, $opacity: 0.23, $color: #3C3C3C) {
+  background-color: transparent;
+  background-color: rgba($r, $g, $b, $opacity);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color}',endColorstr='#{$color}');
+            zoom:   1;
+}
+
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "") {
+  @if ($inset != "") {
+   box-shadow: $inset $x $y $blur $color;
+  } @else {
+   box-shadow: $x $y $blur $color;
+  }
+}
+
+
+@mixin double-borders($colorOne: #3C3C3C, $colorTwo: #999999, $radius: 0) {
+  border: 1px solid $colorOne;
+  box-shadow:0 0 0 1px $colorTwo;
+  border-radius: $radius;
+}
+
+@mixin font-face($fontFamily: myFont, $eotFileSrc: 'myFont.eot', $woffFileSrc: 'myFont.woff', $ttfFileSrc: 'myFont.ttf', $svgFileSrc: 'myFont.svg', $svgFontID: '#myFont') {
+  font-family: $fontFamily;
+  src: url($eotFileSrc)  format('eot'),
+       url($woffFileSrc) format('woff'),
+       url($ttfFileSrc)  format('truetype'),
+       url($svgFileSrc + $svgFontID) format('svg');
+}
+
+@mixin opacity($opacity: 0.5) {
+    $opacityMultiplied: ($opacity * 100);
+    opacity: $opacity;
+}
+
+@mixin rotate($deg: 0, $m11: 0, $m12: 0, $m21: 0, $m22: 0) {
+  transform: rotate($deg + deg);
+  filter: progid:DXImageTransform.Microsoft.Matrix(
+       M11=#{$m11}, M12=#{$m12}, M21=#{$m21}, M22=#{$m22}, sizingMethod='auto expand');
+    zoom: 1;
+}
+
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+    text-shadow: $x $y $blur $color;
+}
+
+@mixin transform($params) {
+  transform: $params;
+}
+
+@mixin transform-origin($params) {
+  transform-origin: $params;
+}
+
+@mixin transform-style($style: preserve-3d) {
+  transform-style: $style;
+}
+
+@mixin transition($properties...) {
+
+  @if length($properties) >= 1 {
+    transition: $properties;
+  }
+
+  @else {
+    transition:all 0.2s ease-in-out 0s;
+  }
+}
+
+@mixin triple-borders($colorOne: #3C3C3C, $colorTwo: #999999, $colorThree: #000000, $radius: 0) {
+    border: 1px solid $colorOne;
+    border-radius:$radius;
+    box-shadow :0 0 0 1px #{$colorTwo}, 0 0 0 2px #{$colorThree};
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+
+//pagination
+
+@mixin pagination-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  > li {
+    > a,
+    > span {
+      padding: $padding-vertical $padding-horizontal;
+      font-size: $font-size;
+      line-height: $line-height;
+    }
+    &:first-child {
+      > a,
+      > span {
+        @include border-left-radius($border-radius);
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+        @include border-right-radius($border-radius);
+      }
+    }
+  }
+}
+
+// Progress bars
+@mixin progress-bar-variant($color) {
+  background-color: $color;
+
+  // Deprecated parent class requirement as of v3.2.0
+  .progress-striped & {
+    @include gradient-striped;
+  }
+}
+
+// Animations
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+       -o-animation: $animation;
+          animation: $animation;
+}
+@mixin animation-name($name) {
+  -webkit-animation-name: $name;
+          animation-name: $name;
+}
+@mixin animation-duration($duration) {
+  -webkit-animation-duration: $duration;
+          animation-duration: $duration;
+}
+@mixin animation-timing-function($timing-function) {
+  -webkit-animation-timing-function: $timing-function;
+          animation-timing-function: $timing-function;
+}
+@mixin animation-delay($delay) {
+  -webkit-animation-delay: $delay;
+          animation-delay: $delay;
+}
+@mixin animation-iteration-count($iteration-count) {
+  -webkit-animation-iteration-count: $iteration-count;
+          animation-iteration-count: $iteration-count;
+}
+@mixin animation-direction($direction) {
+  -webkit-animation-direction: $direction;
+          animation-direction: $direction;
+}
+@mixin animation-fill-mode($fill-mode) {
+  -webkit-animation-fill-mode: $fill-mode;
+          animation-fill-mode: $fill-mode;
+}
+
+// Tables
+
+@mixin table-row-variant($state, $background) {
+  // Exact selectors below required to override `.table-striped` and prevent
+  // inheritance to nested tables.
+  .table > thead > tr,
+  .table > tbody > tr,
+  .table > tfoot > tr {
+    > td.#{$state},
+    > th.#{$state},
+    &.#{$state} > td,
+    &.#{$state} > th {
+      background-color: $background;
+    }
+  }
+
+  // Hover states for `.table-hover`
+  // Note: this is not available for cells or rows within `thead` or `tfoot`.
+  .table-hover > tbody > tr {
+    > td.#{$state}:hover,
+    > th.#{$state}:hover,
+    &.#{$state}:hover > td,
+    &:hover > .#{$state},
+    &.#{$state}:hover > th {
+      background-color: darken($background, 5%);
+    }
+  }
+}
+
+@mixin form-control-validation($text-color: #555, $border-color: #ccc, $background-color: #f5f5f5) {
+  // Color the label and help text
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label  {
+    color: $text-color;
+  }
+  // Set the border and box shadow on specific inputs to match
+  .form-control {
+    border-color: $border-color;
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
+    &:focus {
+      border-color: darken($border-color, 10%);
+      $shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten($border-color, 20%);
+      @include box-shadow($shadow);
+    }
+  }
+  // Set validation states also for addons
+  .input-group-addon {
+    color: $text-color;
+    border-color: $border-color;
+    background-color: $background-color;
+  }
+  // Optional feedback icon
+  .form-control-feedback {
+    color: $text-color;
+  }
+}
+
+// Form control focus state
+//
+// Generate a customized focus state and for any input with the specified color,
+// which defaults to the `$input-border-focus` variable.
+//
+// We highly encourage you to not customize the default value, but instead use
+// this to tweak colors on an as-needed basis. This aesthetic change is based on
+// WebKit's default styles, but applicable to a wider range of browsers. Its
+// usability and accessibility should be taken into account with any change.
+//
+// Example usage: change the default blue border and shadow to white for better
+// contrast against a dark gray background.
+@mixin form-control-focus($color: $input-border-focus) {
+  $color-rgba: rgba(red($color), green($color), blue($color), .6);
+  &:focus {
+    border-color: $color;
+    outline: 0;
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px $color-rgba);
+  }
+}
+
+// Form control sizing
+//
+// Relative text size, padding, and border-radii changes for form controls. For
+// horizontal sizing, wrap controls in the predefined grid classes. `<select>`
+// element gets special love because it's special, and that's a fact!
+// [converter] $parent hack
+@mixin input-size($parent, $input-height, $padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  #{$parent} {
+    height: $input-height;
+    padding: $padding-vertical $padding-horizontal;
+    font-size: $font-size;
+    line-height: $line-height;
+    border-radius: $border-radius;
+  }
+
+  select#{$parent} {
+    height: $input-height;
+    line-height: $input-height;
+  }
+
+  textarea#{$parent},
+  select[multiple]#{$parent} {
+    height: auto;
+  }
+}
+
+@mixin panel-variant($border, $heading-text-color, $heading-bg-color, $heading-border) {
+  border-color: $border;
+
+  & > .panel-heading {
+    color: $heading-text-color;
+    background-color: $heading-bg-color;
+    border-color: $heading-border;
+
+    + .panel-collapse > .panel-body {
+      border-top-color: $border;
+    }
+    .badge {
+      color: $heading-bg-color;
+      background-color: $heading-text-color;
+    }
+  }
+  & > .panel-footer {
+    + .panel-collapse > .panel-body {
+      border-bottom-color: $border;
+    }
+  }
+}
+
+// Transitions
+
+@mixin transition-property($transition-property...) {
+          transition-property: $transition-property;
+}
+@mixin transition-delay($transition-delay) {
+          transition-delay: $transition-delay;
+}
+@mixin transition-duration($transition-duration...) {
+          transition-duration: $transition-duration;
+}
+@mixin transition-timing-function($timing-function) {
+          transition-timing-function: $timing-function;
+}
+@mixin transition-transform($transition...) {
+          transition: transform $transition;
+}
+
+@mixin reset-text() {
+  font-family: $font-family-base;
+  // We deliberately do NOT reset font-size.
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: $line-height-base;
+  text-align: left; // Fallback for where `start` is not supported
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+}
