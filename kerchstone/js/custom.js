@@ -318,10 +318,14 @@ wow.init();
  
 //parallax
 $('.parallax-window').parallax();
-// //mixitup
-var mixer = mixitup('.portfolio-items-wrapper');
+//mixitup
+
 })
 
 jQuery(function($){
    $(".phone").mask("+7(999) 999-99-99");
+   });
+
+jQuery(function($){
+   var mixer = mixitup('.portfolio-items-wrapper');
    });
