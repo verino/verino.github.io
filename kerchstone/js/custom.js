@@ -77,8 +77,6 @@ function initialize() {
   });
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
-
 // slide-out-navbar
 
 var trigger = $('.hamburger'),
