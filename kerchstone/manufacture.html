@@ -30,20 +30,29 @@
     <![endif]-->
 </head>
 <body>
+<div id="wrapper">
+<div class="overlay"></div>
+<div id="page-content-wrapper">
 <!--[if lt IE 7]>
 			<p class="browsehappy">Вы используете <strong>устаревший</strong> браузер . Пожалуйста <a href="http://browsehappy.com/"> обновите Ваш браузер</a> для улучшения отображения сайта.</p>
 		<![endif]-->
 <header>
 	<div class="container-fluid">
 		<div class="header__navbar row">
-			<div class="logo col-3"><a class="logo__navbar" href="index.html"><img class="logo__img" src="img/logo-white.png" /></a></div>
-			<nav class="header__nav col-6">
-				<ul>
+			<button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+    			<span class="hamb-middle"></span>
+				<span class="hamb-bottom"></span>
+            </button>
+			<div class="logo col-lg-2 col-md-6 col-sm-6 col-6"><a class="logo__navbar" href="index.html"><img class="logo__img" alt="logo" src="img/logo-white.png" /></a></div>
+			<nav class="header__nav col-lg-8  collapse" id="sidebar-wrapper">
+				<ul class="nav sidebar-nav">
+					<li><a href="index.html">Главная</a></li>
 					<li><a href="manufacture.html">Производство</a></li>
 					<li><a href="portfolio.html">Портфолио</a></li>
 					<li class="dropdown">
-						<a href="catalog.html">Каталог камня <i class="icon icon-down-dir"></i></a>
-						<div class="dropdown-menu">
+						<a href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Каталог камня <i class="icon icon-down-dir"></i></a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <ul>
                                         <li><a href="catalog-item.html">Мрамор</a></li>
                                         <li><a href="catalog-item.html">Гранит</a></li>
@@ -59,8 +68,8 @@
                         </div>
 					</li>
 					<li class="dropdown">
-						<a href="catalog.html">Продукция <i class="icon icon-down-dir"></i></a> 
-						<div class="dropdown-menu">
+						<a href="#"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Продукция <i class="icon icon-down-dir"></i></a> 
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<ul>
 								<li><a href="catalog-item.html">Мрамор</a></li>
 								<li><a href="catalog-item.html">Гранит</a></li>
@@ -80,7 +89,7 @@
 					<li><a href="contacts.html">Контакты</a></li>
 				</ul>
 			</nav>
-			<div class="header__contacts phone col-3">
+			<div class="header__contacts phone col-lg-2 col-md-6 col-sm-6 col-6">
 			<a class="phone__number" href="tel:+70000000000">+7(499)000-00-00</a>
 			<a class="phone__number" href="tel:+70000000000">+7(499)000-00-00</a>
 			<a href="#feedback" class="magnific-popup phone-btn">Оформить заказ</a>
@@ -171,7 +180,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-4">
+			<div class="col-lg-4 col-md-4 col-12">
 				<h3>Материалы, которые мы используем в производстве:</h3>
 				<ul>
 					<li><a href="">гранит</a></li>
@@ -181,7 +190,7 @@
 					<li><a href="">оникс</a></li>
 				</ul>
 			</div>
-			<div class="col-8">
+			<div class="col-lg-8 col-md-8 col-12">
 				<h3>Мы предоставляем продукцию исключительно высокого качества, так как:</h3>
 				<ul>
 					<li>регулярно поставляем тщательно отобранный материал из Греции, Испании, Италии, Украины, с Урала;</li>
@@ -260,15 +269,15 @@
 </footer>
 <!-- </main> -->
 <div class="popup mfp-hide" id="feedback">
-		<form id="form">
+		<form id="form1">
 			<div class="user-data">
 				<div class="user-name">
-					<label for="name">Ваше имя</label>
-					<input type="text" name="name" id="name" placeholder="Представтесь, пожалуйста" required >
+					<label for="name1">Ваше имя</label>
+					<input type="text" name="name1" id="name1" placeholder="Представтесь, пожалуйста" required >
 				</div>
 				<div class="user-phone">
-					<label for="phone">Телефон:</label>
-					<input type="tel" class="phone" name="phone" id="phone" placeholder="Для отправки ответа" required >
+					<label for="phone1">Телефон:</label>
+					<input type="tel" class="phone" name="phone1" id="phone1" placeholder="Для отправки ответа" required >
 				</div>
 			</div>
 			<div class="button-inner">
@@ -279,6 +288,7 @@
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
 	<script type="text/javascript" src="js/script.min.js"></script>
-
+</div>	
+</div>
 </body>
 </html>

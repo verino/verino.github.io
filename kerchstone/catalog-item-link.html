@@ -30,20 +30,29 @@
     <![endif]-->
 </head>
 <body>
+<div id="wrapper">
+<div class="overlay"></div>
+<div id="page-content-wrapper">
 <!--[if lt IE 7]>
 			<p class="browsehappy">Вы используете <strong>устаревший</strong> браузер . Пожалуйста <a href="http://browsehappy.com/"> обновите Ваш браузер</a> для улучшения отображения сайта.</p>
 		<![endif]-->
 <header>
 	<div class="container-fluid">
 		<div class="header__navbar row">
-			<div class="logo col-3"><a class="logo__navbar" href="index.html"><img class="logo__img" src="img/logo-white.png" /></a></div>
-			<nav class="header__nav col-6">
-				<ul>
+			<button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+    			<span class="hamb-middle"></span>
+				<span class="hamb-bottom"></span>
+            </button>
+			<div class="logo col-lg-2 col-md-6 col-sm-6 col-6"><a class="logo__navbar" href="index.html"><img class="logo__img" alt="logo" src="img/logo-white.png" /></a></div>
+			<nav class="header__nav col-lg-8  collapse" id="sidebar-wrapper">
+				<ul class="nav sidebar-nav">
+					<li><a href="index.html">Главная</a></li>
 					<li><a href="manufacture.html">Производство</a></li>
 					<li><a href="portfolio.html">Портфолио</a></li>
 					<li class="dropdown">
-						<a href="catalog.html">Каталог камня <i class="icon icon-down-dir"></i></a>
-						<div class="dropdown-menu">
+						<a href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Каталог камня <i class="icon icon-down-dir"></i></a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <ul>
                                         <li><a href="catalog-item.html">Мрамор</a></li>
                                         <li><a href="catalog-item.html">Гранит</a></li>
@@ -59,8 +68,8 @@
                         </div>
 					</li>
 					<li class="dropdown">
-						<a href="catalog.html">Продукция <i class="icon icon-down-dir"></i></a> 
-						<div class="dropdown-menu">
+						<a href="#"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Продукция <i class="icon icon-down-dir"></i></a> 
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<ul>
 								<li><a href="catalog-item.html">Мрамор</a></li>
 								<li><a href="catalog-item.html">Гранит</a></li>
@@ -80,7 +89,7 @@
 					<li><a href="contacts.html">Контакты</a></li>
 				</ul>
 			</nav>
-			<div class="header__contacts phone col-3">
+			<div class="header__contacts phone col-lg-2 col-md-6 col-sm-6 col-6">
 			<a class="phone__number" href="tel:+70000000000">+7(499)000-00-00</a>
 			<a class="phone__number" href="tel:+70000000000">+7(499)000-00-00</a>
 			<a href="#feedback" class="magnific-popup phone-btn">Оформить заказ</a>
@@ -102,10 +111,10 @@
 				</ol>
 			</nav>
 			<div class="row catalog-item">
-				<div class="col-6 catalog-item__img">
+				<div class="col-lg-6 col-md-6 col-4 catalog-item__img">
 					<a href="img/stone4.jpg" class="image-popup-no-margins"><img src="img/stone4.jpg" alt=""></a>
 				</div>
-				<div class="col-6 catalog-item__desc">
+				<div class="col-lg-6 col-md-6 col-8 catalog-item__desc">
 					<a href="#presence" class="magnific-popup btn-catalog">Узнать цену и наличие</a>
 					<p>Светло-бежевый травертин с ровной матовой поверхностью и заполненными порами из Турции. Вид реза - продольный. Область применения этой плитки из травертина безгранична - полы, стены, фасады.</p> 
 						<p>Купить травертин классик лайт Вы можете, позвонив нашим менеджерам по телефону или оформив заказ онлайн!</p>
@@ -139,53 +148,73 @@
 						</table>
 				</div>
 			</div>
-				<div class="products">
-		<h2>Продукция из белого мрамора</h2>
-		<div class="limit">* Количество товара ограничено</div>
-		<div class=" card-item card-deck wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.3s">
-			<div class="card ">
-				<a class="card-img" href=""><img class="card-img-top" src="img/product.jpg" alt="Card image cap"></a>
-				<div class="card-body">
-					<a href="" class="card-title">Раковина из травертина классик полированная</a>
-					<p class="card-text">4 100 p <span class="old-price">8 000 p</span></p>
-					<a href="#presence" class="btn btn-secondary">Oтправить запрос!</a>
+			<div class="products">
+				<h2>Продукция из белого мрамора</h2>
+				<div class="limit">* Количество товара ограничено</div>
+				<div class=" card-item row no-gutters wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.3s">
+					<div class="col-lg-2 col-md-4 col-sm-6 col-12">
+						<div class="card ">
+							<a class="card-img" href=""><img class="card-img-top" src="img/product.jpg" alt="Card image cap"></a>
+							<div class="card-body">
+								<a href="" class="card-title">Раковина из травертина классик полированная</a>
+								<p class="card-text">4 100 p <span class="old-price">8 000 p</span></p>
+								<a href="#presence" class="btn btn-secondary magnific-popup">Oтправить запрос!</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 col-sm-6 col-12">
+						<div class="card ">
+							<a class="card-img" href=""><img class="card-img-top" src="img/product.jpg" alt="Card image cap"></a>
+							<div class="card-body">
+								<a href="" class="card-title">Раковина из травертина классик полированная</a>
+								<p class="card-text">4 100 p <span class="old-price">8 000 p</span></p>
+								<a href="#presence" class="btn btn-secondary magnific-popup">Oтправить запрос!</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 col-sm-6 col-12">
+						<div class="card ">
+							<a class="card-img" href=""><img class="card-img-top" src="img/product.jpg" alt="Card image cap"></a>
+							<div class="card-body">
+								<a href="" class="card-title">Раковина из травертина классик полированная</a>
+								<p class="card-text">4 100 p <span class="old-price">8 000 p</span></p>
+								<a href="#presence" class="btn btn-secondary magnific-popup">Oтправить запрос!</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 col-sm-6 col-12">
+						<div class="card ">
+							<a class="card-img" href=""><img class="card-img-top" src="img/product.jpg" alt="Card image cap"></a>
+							<div class="card-body">
+								<a href="" class="card-title">Раковина из травертина классик полированная</a>
+								<p class="card-text">4 100 p <span class="old-price">8 000 p</span></p>
+								<a href="#presence" class="btn btn-secondary magnific-popup">Oтправить запрос!</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 col-sm-6 col-12">
+						<div class="card ">
+							<a class="card-img" href=""><img class="card-img-top" src="img/product.jpg" alt="Card image cap"></a>
+							<div class="card-body">
+								<a href="" class="card-title">Раковина из травертина классик полированная</a>
+								<p class="card-text">4 100 p <span class="old-price">8 000 p</span></p>
+								<a href="#presence" class="btn btn-secondary magnific-popup">Oтправить запрос!</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 col-sm-6 col-12">
+						<div class="card ">
+							<a class="card-img" href=""><img class="card-img-top" src="img/product.jpg" alt="Card image cap"></a>
+							<div class="card-body">
+								<a href="" class="card-title">Раковина из травертина классик полированная</a>
+								<p class="card-text">4 100 p <span class="old-price">8 000 p</span></p>
+								<a href="#presence" class="btn btn-secondary magnific-popup">Oтправить запрос!</a>
+							</div>
+						</div>
+					</div>
 				</div>
+				<div class="wrapper-btn"><a href="" class="btn-catalog">Перейти в каталог</a></div>
 			</div>
-			<div class="card ">
-				<a class="card-img" href=""><img class="card-img-top" src="img/product.jpg" alt="Card image cap"></a>
-				<div class="card-body">
-					<a href="" class="card-title">Раковина из травертина классик полированная</a>
-					<p class="card-text">4 100 p <span class="old-price">8 000 p</span></p>
-					<a href="#presence" class="btn btn-secondary">Oтправить запрос!</a>
-				</div>
-			</div>
-			<div class="card ">
-				<a class="card-img" href=""><img class="card-img-top" src="img/product.jpg" alt="Card image cap"></a>
-				<div class="card-body">
-					<a href="" class="card-title">Раковина из травертина классик полированная</a>
-					<p class="card-text">4 100 p <span class="old-price">8 000 p</span></p>
-					<a href="#presence" class="btn btn-secondary">Oтправить запрос!</a>
-				</div>
-			</div>
-			<div class="card ">
-				<a class="card-img" href=""><img class="card-img-top" src="img/product.jpg" alt="Card image cap"></a>
-				<div class="card-body">
-					<a href="" class="card-title">Раковина из травертина классик полированная</a>
-					<p class="card-text">4 100 p <span class="old-price">8 000 p</span></p>
-					<a href="#presence" class="btn btn-secondary">Oтправить запрос!</a>
-				</div>
-			</div>
-			<div class="card ">
-				<a class="card-img" href=""><img class="card-img-top" src="img/product.jpg" alt="Card image cap"></a>
-				<div class="card-body">
-					<a href="" class="card-title">Раковина из травертина классик полированная</a>
-						<p class="card-text">4 100 p <span class="old-price">8 000 p</span></p>
-						<a href="#presence" class="btn btn-secondary">Oтправить запрос!</a>
-				</div>
-			</div>
-		</div>
-		<div class="wrapper-btn"><a href="" class="btn-catalog">Перейти в каталог</a></div>
-	</div>
 		</div>
 	</div>
 </section>
@@ -248,15 +277,15 @@
 </footer>
 <!-- </main> -->
 <div class="popup mfp-hide" id="feedback">
-		<form id="form">
+		<form id="form1">
 			<div class="user-data">
 				<div class="user-name">
-					<label for="name">Ваше имя</label>
-					<input type="text" name="name" id="name" placeholder="Представтесь, пожалуйста" required >
+					<label for="name1">Ваше имя</label>
+					<input type="text" name="name1" id="name1" placeholder="Представтесь, пожалуйста" required >
 				</div>
 				<div class="user-phone">
-					<label for="phone">Телефон:</label>
-					<input type="tel" class="phone" name="phone" id="phone" placeholder="Для отправки ответа" required >
+					<label for="phone1">Телефон:</label>
+					<input type="tel" class="phone" name="phone1" id="phone1" placeholder="Для отправки ответа" required >
 				</div>
 			</div>
 			<div class="button-inner">
@@ -287,6 +316,7 @@
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
 	<script type="text/javascript" src="js/script.min.js"></script>
-
+</div>	
+</div>
 </body>
 </html>

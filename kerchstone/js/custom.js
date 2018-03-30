@@ -51,7 +51,7 @@ var wow = new WOW(
   }
 );
 wow.init();
- 
+
 //parallax
 $('.parallax-window').parallax();
 //mixitup
@@ -79,8 +79,37 @@ function initialize() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
+// slide-out-navbar
+
+var trigger = $('.hamburger'),
+overlay = $('.overlay'),
+isClosed = false;
+
+trigger.click(function () {
+  hamburger_cross();      
+});
+
+function hamburger_cross() {
+
+  if (isClosed == true) {          
+    overlay.hide();
+    trigger.removeClass('is-open');
+    trigger.addClass('is-closed');
+    isClosed = false;
+  } else {   
+    overlay.show();
+    trigger.removeClass('is-closed');
+    trigger.addClass('is-open');
+    isClosed = true;
+  }
+}
+
+$('[data-toggle="offcanvas"]').click(function () {
+  $('#wrapper').toggleClass('toggled');
+}); 
+
 })
 
 jQuery(function($){
-   $(".phone").mask("+7(999) 999-99-99");
-   });
+ $(".phone").mask("+7(999) 999-99-99");
+});
