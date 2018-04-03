@@ -2654,6 +2654,9 @@ img.mfp-img {
   bottom: -80px; }
 
 @media (max-width: 575.98px) {
+  .popup {
+    padding: 50px 40px 10px; }
+
   .popup .user-name,
   .popup .user-email {
     float: none; }
@@ -2757,7 +2760,7 @@ img.mfp-img {
     background-color: #4c3d37;
     transition: width 0.1s ease-in; }
 
-  .sidebar-nav li:first-child a {
+  .sidebar-nav li:first-child {
     color: #fff;
     background-color: #006579; }
 
