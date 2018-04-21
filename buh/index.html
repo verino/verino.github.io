@@ -13,31 +13,17 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Favicons for all devices -->
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="img/favicons/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
     <link rel="manifest" href="img/favicons/manifest.json">
-    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
 	<title>Document</title>
-	<!-- <link rel="stylesheet" href="css/style.min.css"> -->
-    <link rel="stylesheet" type="text/css" href="css/libs.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="css/style.min.css">
+   <!--  <link rel="stylesheet" type="text/css" href="css/libs.css">
+   <link rel="stylesheet" type="text/css" href="css/main.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Arsenal:700|Montserrat:400,700|Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
-<body>
+<body id="works">
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:0; height:0; position: absolute;">
     <linearGradient id="grad"><stop style="stop-color:#2ed3ae" offset="0%" /><stop style="stop-color:#109df7" offset="100%" /></linearGradient>
@@ -58,7 +44,7 @@
 <!--[if lt IE 7]>
 			<p class="browsehappy">Вы используете <strong>устаревший</strong> браузер . Пожалуйста <a href="http://browsehappy.com/"> обновите Ваш браузер</a> для улучшения отображения сайта.</p>
 		<![endif]-->
-<header>
+<header  id="js-nav">
 <nav class="navbar navbar--style">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -69,7 +55,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand logo" href="#">
+      <a class="navbar-brand logo" href="#home">
       	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.417 43.417" class="logo-img">
       		<g>
       			<path d="M12.408 10.884H.625a.625.625 0 0 0-.625.625v27.918c0 .345.28.625.625.625h11.783c.345 0 .625-.28.625-.625V11.509a.625.625 0 0 0-.625-.625zm-.625 27.918H1.25V12.134h10.533v26.668zM37.202 11.884a.644.644 0 0 0-.752-.464l-8.721 2.081a.617.617 0 0 0-.18.083V3.312a.625.625 0 0 0-.625-.625H15.14a.625.625 0 0 0-.625.625v36.115c0 .345.28.625.625.625h11.783c.345 0 .625-.28.625-.625V15.438l5.915 24.811a.629.629 0 0 0 .753.464l8.722-2.081a.627.627 0 0 0 .462-.754l-6.198-25.994zM26.298 38.802H15.765V3.937h10.533v34.865zm8.236.549l-5.908-24.78 7.504-1.788 5.908 24.778-7.504 1.79z"/>
@@ -83,12 +69,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav menu">
-        <li class="active"><a href="#">Главная <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Новости законодательства</a></li>
-        <li><a href="#">ФЛП</a></li>
-        <li><a href="#">Юридическим лицам</a></li>
-        <li><a href="#">Цены</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#news">Новости закона</a></li>
+        <li><a href="#action">Акции</a></li>
+        <li><a href="#price">Цены</a></li>
+        <li><a href="#contact">Контакты</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right contacts">
         <li><a href="tel:+80710000000"><i class="icon icon-phone-1"></i> +8(071)000-00-00</a></li>
@@ -99,7 +84,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 </header>
-<section class="bottom-header">
+<section class="bottom-header" id="home">
 		    <div class="carousel">
 		        <div id="js-carousel">
 		            <div class="js-slide">
@@ -136,11 +121,13 @@
 		            </div>       
 		        </div>
 		    </div><!-- /.carousel -->
+</section>
+<section class="content">
 	<div class="container">
-		<div class="services">
+		<div class="services" id="services">
 			<h2 class="main-title">Представляем бух. услуги в Макеевке и Донецке</h2>
 			<div class="thumbnail-row">
-				<div class="thumbnail-col">
+				<div class="thumbnail-col wow slideInLeft" data-wow-duration="0.6s" data-wow-delay="0.2s">
 					<a href="#" class="thumbnail">
 						<svg class="svg-dims"><use xlink:href="#business_1"></use></svg>
 						<div class="caption">
@@ -148,7 +135,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="thumbnail-col">
+				<div class="thumbnail-col wow slideInLeft" data-wow-duration="0.6s" data-wow-delay="0.2s">
 					<a href="#" class="thumbnail">
 						<svg class="svg-dims"><use xlink:href="#money"></use></svg>
 						<div class="caption">
@@ -156,7 +143,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="thumbnail-col">
+				<div class="thumbnail-col wow slideInRight" data-wow-duration="0.6s" data-wow-delay="0.2s">
 					<a href="#" class="thumbnail">
 						<svg class="svg-dims"><use xlink:href="#handshake"></use></svg>
 						<div class="caption">
@@ -164,7 +151,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="thumbnail-col">
+				<div class="thumbnail-col wow slideInRight" data-wow-duration="0.6s" data-wow-delay="0.2s">
 					<a href="#" class="thumbnail">
 						<svg class="svg-dims"><use xlink:href="#calendar"></use></svg>
 						<div class="caption">
@@ -172,7 +159,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="thumbnail-col">
+				<div class="thumbnail-col wow slideInLeft" data-wow-duration="0.6s" data-wow-delay="0.2s">
 					<a href="#" class="thumbnail">
 						<svg class="svg-dims"><use xlink:href="#business"></use></svg>
 						<div class="caption">
@@ -180,7 +167,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="thumbnail-col">
+				<div class="thumbnail-col wow slideInLeft" data-wow-duration="0.6s" data-wow-delay="0.2s">
 					<a href="#" class="thumbnail">
 						<svg class="svg-dims"><use xlink:href="#person"></use></svg>
 						<div class="caption">
@@ -188,7 +175,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="thumbnail-col">
+				<div class="thumbnail-col wow slideInRight" data-wow-duration="0.6s" data-wow-delay="0.2s">
 					<a href="#" class="thumbnail">
 						<svg class="svg-dims"><use xlink:href="#meeting"></use></svg>
 						<div class="caption">
@@ -196,7 +183,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="thumbnail-col">
+				<div class="thumbnail-col wow slideInRight" data-wow-duration="0.6s" data-wow-delay="0.2s">
 					<a href="#" class="thumbnail">
 						<svg class="svg-dims"><use xlink:href="#document"></use></svg>
 						<div class="caption">
@@ -209,11 +196,9 @@
 			<div class="wrapper-order"><a href="#feedback" class="magnific-popup order-btn">Заказать услуги</a></div>
 		</div>
 	</div>
-</section>
-<section class="content">
 		<div class="container">
-		<div class="row news-action">
-			<div class="col-md-6 news__wrapper">
+		<div class="row news-action wow zoomIn" data-wow-duration="2s" data-wow-delay="0.5s" id="news">
+			<div class="col-md-6 col-sm-6 news__wrapper">
 				<h2 class="main-title">Новости закона</h2>
 				<ul class="news__list">
 					<li class="news__item"><a href="#"><h4>Закон ДНР «О бухгалтерском учете и финансовой отчетности»</h4></a></li>
@@ -229,7 +214,7 @@
 					<li class="news__item"><a href="#"><h4>Остальные изменения в законодательстве ДНР</h4></a></li>
 				</ul>
 				</div>
-			<div class="col-md-6 action__wrapper">
+			<div class="col-md-6 col-sm-6  action__wrapper" id="action">
 				<h2 class="main-title">Акции</h2>
 				<ul class="action__list">
 					<li class="action__item"><p class="sale" href="#">Оставьте заявку <u>сейчас</u> и получите<span class="sale__amount"> 30% скидку</span><u> на сумму договора</u></p></li>
@@ -247,7 +232,7 @@
 		<div class="problems">
 			<h2 class="main-title">Проблемы, с которыми сталкивается большинство наших клиентов</h2>
 			<div class="thumbnail-row">
-				<div class="thumbnail-col">
+				<div class="thumbnail-col wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
 					<a href="#" class="thumbnail thumbnail--problems">
 						<svg class="svg-dims"><use xlink:href="#pen_1"></use></svg>
 						<div class="caption">
@@ -255,7 +240,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="thumbnail-col">
+				<div class="thumbnail-col wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
 					<a href="#" class="thumbnail thumbnail--problems">
 						<svg class="svg-dims"><use xlink:href="#hands"></use></svg>
 						<div class="caption">
@@ -263,7 +248,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="thumbnail-col">
+				<div class="thumbnail-col wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
 					<a href="#" class="thumbnail thumbnail--problems">
 						<svg class="svg-dims"><use xlink:href="#medical"></use></svg>
 						<div class="caption">
@@ -271,7 +256,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="thumbnail-col">
+				<div class="thumbnail-col wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
 					<a href="#" class="thumbnail thumbnail--problems">
 						<svg class="svg-dims"><use xlink:href="#coins"></use></svg>
 						<div class="caption">
@@ -372,7 +357,7 @@
 			<h2 class="main-title">Отзывы</h2>
 			<div class="row">
 				<div class="col-md-3 col-sm-6">
-					<div class="thumbnail thumbnail--reviews">
+					<div class="thumbnail thumbnail--reviews wow flipInY" data-wow-duration="1.5s" data-wow-delay="1s">
 						<div class="caption caption--reviews">
 							<h3>Шульга Александр
 								<span>Юридическая компания«Шульга и Партнеры»</span></h3>
@@ -382,7 +367,7 @@
 					</div>
 				</div>  
 				<div class="col-md-3 col-sm-6">
-					<div class="thumbnail thumbnail--reviews">
+					<div class="thumbnail thumbnail--reviews wow flipInY" data-wow-duration="1.5s" data-wow-delay="1s">
 						<div class="caption caption--reviews">
 							<h3>Ковалёв Петр
 								<span>Интернет провайдер «LIGHT-NET»</span></h3>
@@ -410,7 +395,7 @@
 					</div>
 				</div>  
 				<div class="col-md-3 col-sm-6">
-					<div class="thumbnail thumbnail--reviews">
+					<div class="thumbnail thumbnail--reviews wow flipInY" data-wow-duration="1.5s" data-wow-delay="1s">
 						<div class="caption caption--reviews">
 							<h3>Мажукин Александр<span>ООО «Диаманд»
 								Изготовление и доставка пиццы</span></h3>
@@ -420,7 +405,7 @@
 					</div>
 				</div> 
 				<div class="col-md-3 col-sm-6">
-					<div class="thumbnail thumbnail--reviews">
+					<div class="thumbnail thumbnail--reviews wow flipInY" data-wow-duration="1.5s" data-wow-delay="1s">
 						<div class="caption caption--reviews">
 							<h3>Ясина Александра<span>Интернет-Магазин «СТЕП 2»</span></h3>
 							<p>Я предприниматель, торгую игрушками в
@@ -448,45 +433,45 @@
 				</div>  										
 			</div>
 		</div>
-		<div class="price">
+		<div class="price" id="price">
 			<h2 class="main-title">Цены</h2>
-			<table class="table table-hover">
-				<thead>
-					<tr>
-						<th>№</th>
-						<th>Вид деятельности</th>
-						<th>Вид налогообложения</th>
-						<th>Количество работников</th>
-						<th>Стоимость</th>
-					</tr>
-				</thead> 
-				<tbody>
-					<tr>
-						<th scope="row">1</th>
-						<td>Физ. лицо - предприниматель</td>
-						<td>на УСН</td>
-						<td>без работников</td>
-						<td>от 3 000 p/МЕС.</td>
-					</tr> 
-					<tr>
-						<th scope="row">2</th>
-						<td>Юридическое лицо</td>
-						<td>на УСН+ЕНВД</td>
-						<td>2 сотрудника+</td>
-						<td>от 5 800 p/МЕС.</td>
-					</tr> 
-					<tr> <th scope="row">3</th>
-						<td>ООО</td>
-						<td>на ОСНО</td>
-						<td>4 сотрудника+</td>
-						<td>от 7 500 p/МЕС.</td>
-					</tr> 
-				</tbody> 
-			</table>
+			<div class="table-responsive"><table class="table table-hover">
+							<thead>
+								<tr>
+									<th>№</th>
+									<th>Вид деятельности</th>
+									<th>Вид налогообложения</th>
+									<th>Количество работников</th>
+									<th>Стоимость</th>
+								</tr>
+							</thead> 
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Физ. лицо - предприниматель</td>
+									<td>на УСН</td>
+									<td>без работников</td>
+									<td>от 3 000 p/МЕС.</td>
+								</tr> 
+								<tr>
+									<th scope="row">2</th>
+									<td>Юридическое лицо</td>
+									<td>на УСН+ЕНВД</td>
+									<td>2 сотрудника+</td>
+									<td>от 5 800 p/МЕС.</td>
+								</tr> 
+								<tr> <th scope="row">3</th>
+									<td>ООО</td>
+									<td>на ОСНО</td>
+									<td>4 сотрудника+</td>
+									<td>от 7 500 p/МЕС.</td>
+								</tr> 
+							</tbody> 
+						</table></div>
 		</div>
 	</div>
 </section>
-	<footer class="footer-small" >
+	<footer class="footer-small" id="contact" >
 		<div class="container">
 			<div class="contact">
 				<ul>
@@ -500,7 +485,7 @@
 				<a href="#"><i class="icon icon-vkontakte-1"></i></a>
 			</div>
 			<div class="production">
-				<a href="https://verino.github.io/">website by Verino</a>
+				<a href="https://verino.github.io/" target="blank">website by Verino</a>
 			</div>
 		</div>
 	</footer>
@@ -526,7 +511,6 @@
 			</form>
 		</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-	<script src="http://maps.google.com/maps/api/js?v=3.exp"></script>
 	<script type="text/javascript" src="js/script.min.js"></script>
 
 </body>

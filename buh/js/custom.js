@@ -40,17 +40,12 @@ $('#js-carousel').slick({
     return false;
   });
 
-// Nice scroll
-$("body").niceScroll(
-	{
-		cursorwidth:"10px"
-	});
 
 /*WOW*/
 wow = new WOW({
 			mobile: false
 		});
-		wow.init();
+wow.init();
 
 // countdown
 var twoDaysFromNow = new Date().valueOf() + 0.25 * 24 * 60 * 60 * 1000;
@@ -58,5 +53,46 @@ $('#clock').countdown(twoDaysFromNow, function(event) {
   var totalHours = event.offset.totalDays * 24 + event.offset.hours;
   $(this).html(event.strftime(totalHours + ' ч %M мин %S сек'));
 });
+// Nice scroll
+$("body").niceScroll(
+	{
+		cursorwidth:"10px"
+	});
+
+
+
+/* Smooth scroll / Scroll To Top
+/* ---------------------------------------------- */
+
+$('a[href*=#]').bind("click", function(e){
+	var anchor = $(this);
+	$('html, body').stop().animate({
+		scrollTop: $(anchor.attr('href')).offset().top-130
+	}, 1000);
+	e.preventDefault();
+});
 
 })
+
+jQuery(function($) {
+
+	/**Fixed header when scroll**/
+	var headerH = $("#home").height(),
+	navH = $("#js-nav").innerHeight();
+	$(document).on("scroll", function() {
+		var documentScroll = $(this).scrollTop();
+		if (documentScroll > headerH) {
+			$("#js-nav").addClass("fixed");
+			$("#works").css({
+				"marginTop": navH
+			});
+
+		} else {
+			$("#js-nav").removeClass("fixed");
+			$("#works").removeAttr("style");
+		}
+	});
+
+
+
+});
