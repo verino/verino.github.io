@@ -468,3 +468,25 @@ img.mfp-img {
   top: 0;
   z-index: 200;
   width: 100%; }
+@media (max-width: 575.98px) {
+  .popup {
+    padding: 50px 40px 10px; }
+
+  .popup .user-name,
+  .popup .user-email {
+    float: none; }
+
+  .button-inner {
+    bottom: -105px;
+    padding-bottom: 10px; }
+
+  .popup input[type=reset],
+  .popup input[type=submit] {
+    margin-left: 0;
+    display: block;
+    font-size: 0.8125rem;
+    line-height: 30px;
+    height: 30px; }
+
+  .popup textarea {
+    width: 100%; } }

@@ -24,21 +24,7 @@ $('#js-carousel').slick({
 });
 
 
-// * Аякс отправка форм
- //Документация: http://api.jquery.com/jquery.ajax/
-  $("#form").submit(function() {
-    $.ajax({
-      type: "POST",
-      url: "mail.php",
-      data: $(this).serialize()
-    }).done(function() {
-      $(this).find("input").val("");
-      alert("Спасибо за заявку!");
-      $("#form").trigger("reset");
 
-    });
-    return false;
-  });
 
 
 /*WOW*/
@@ -58,8 +44,38 @@ $("body").niceScroll(
 	{
 		cursorwidth:"10px"
 	});
+//form validation
+$('#email').blur(function() {
+	if($(this).val() != '') {
+		var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+		if(pattern.test($(this).val())){
+			$(this).css({'border' : '1px solid #569b44'});
+			$('#valid').text('Верно');
+		} else {
+			$(this).css({'border' : '1px solid #ff0000'});
+			$('#valid').text('Не верно');
+		}
+	} else {
+		$(this).css({'border' : '1px solid #ff0000'});
+		$('#valid').text('Поле email не должно быть пустым');
+	}
+});
 
+// Form ajax
 
+$("#form").submit(function() {
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: $(this).serialize()
+    }).done(function() {
+      $(this).find("input").val("");
+      alert("Спасибо за заявку!");
+      $("#form").trigger("reset");
+
+    });
+    return false;
+  });
 
 /* Smooth scroll / Scroll To Top
 /* ---------------------------------------------- */

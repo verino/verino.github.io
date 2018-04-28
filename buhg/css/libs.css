@@ -698,12 +698,11 @@ img.mfp-img {
     margin-right: 20px;
     float: left; }
   .popup .user-email {
-    float: left; }
+    float: left;
+    position: relative; }
   .popup label {
-    font-family: "Cuprum";
     font-size: 1.125rem;
     color: #000;
-    font-weight: 500;
     display: block;
     padding-bottom: 10px;
     text-transform: none; }
@@ -715,9 +714,8 @@ img.mfp-img {
     border: 2px solid #d7dbdd;
     background-color: #fff;
     color: #000;
-    font-family: "OpenSans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 0.75rem;
-    font-weight: 500;
     margin-bottom: 30px; }
   .popup input[type="submit"],
   .popup input[type="reset"] {
@@ -725,7 +723,8 @@ img.mfp-img {
     margin-top: 20px;
     padding: 0 75px;
     min-width: 120px;
-    border-radius: 20px; }
+    border-radius: 20px;
+    font-weight: normal; }
   .popup input[type="reset"] {
     margin-left: 20px;
     background-color: #fff;
@@ -740,6 +739,14 @@ img.mfp-img {
   top: 0;
   z-index: 200;
   width: 100%; }
+
+#valid {
+  position: absolute;
+  font-size: 10px;
+  font-weight: normal;
+  right: 0;
+  bottom: 0;
+  text-transform: none; }
 
 .panel {
   margin-bottom: 20px;
