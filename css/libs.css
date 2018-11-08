@@ -25,5 +25,20 @@
   top: 0;
   z-index: 200; }
 
-.nav li.active a {
-  border-bottom: 2px solid #EB565C; }
+.nav li {
+  position: relative; }
+
+.nav li a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 22%;
+  left: 25%;
+  background: linear-gradient(to left, #7b4397, #dc2430);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out 0s; }
+
+.nav li.active a:before {
+  visibility: visible;
+  width: 50%; }
