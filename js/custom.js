@@ -17,22 +17,21 @@ $(function() {
 		imageSrc: 'img/header-bg.jpg'
 	});
 
-	/**Fixed header when scroll**/
-	var headerH = $("#home").height(),
-	navH = $("#js-nav").innerHeight();
-	$(document).on("scroll", function() {
-		var documentScroll = $(this).scrollTop();
-		if (documentScroll > headerH) {
-			$("#js-nav").addClass("fixed");
-			$("#works").css({
-				"marginTop": navH
-			});
-
-		} else {
-			$("#js-nav").removeClass("fixed");
-			$("#works").removeAttr("style");
-		}
-	});
+	/*-----------------------------------
+     * FIXED  MENU - HEADER
+     *-----------------------------------*/
+    function menuscroll() {
+        var $navmenu = $('#js-nav');
+        if ($(window).scrollTop() > 50) {
+            $navmenu.addClass('is-scrolling');
+        } else {
+            $navmenu.removeClass("is-scrolling");
+        }
+    }
+    menuscroll();
+    $(window).on('scroll', function() {
+        menuscroll();
+    });
 
 /* Smooth scroll / Scroll To Top
 /* ---------------------------------------------- */

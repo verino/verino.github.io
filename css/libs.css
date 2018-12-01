@@ -42,3 +42,6 @@
 .nav li.active a:before {
   visibility: visible;
   width: 50%; }
+
+.header.is-scrolling {
+  background-color: #fff; }

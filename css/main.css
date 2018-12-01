@@ -597,6 +597,7 @@ body {
 /* INTRO */
 
 .intro {
+  padding-top: 60px;
   height: 100vh;
   position: relative;
   display: -webkit-box;
@@ -711,6 +712,12 @@ body {
 
 .header {
   width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, .75);
 }
 
 .header__inner {
@@ -730,7 +737,6 @@ body {
 
 .header__navbar {
   position: relative;
-  background-color: #fff;
   min-height: 60px;
   line-height: 60px;
   font-size: 20px;
