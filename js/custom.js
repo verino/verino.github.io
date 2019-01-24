@@ -1,10 +1,10 @@
 
-/* PREloader*/
-$(window).load(function() {
-	setTimeout(function () { 
-		$(".preloader").delay(100).fadeOut().remove();   
-	}, 2000);  
-});
+// /* PREloader*/
+// $(window).load(function() {
+// 	setTimeout(function () { 
+// 		$(".preloader").delay(100).fadeOut().remove();   
+// 	}, 2000);  
+// });
 
 $(function() {
 	/*Nicescroll*/
@@ -13,9 +13,9 @@ $(function() {
 	});
 
 	/*Parallax*/
-	$('.skills').parallax({
-		imageSrc: 'img/header-bg.jpg'
-	});
+	// $('.skills').parallax({
+	// 	imageSrc: 'img/header-bg.jpg'
+	// });
 
 	/*-----------------------------------
      * FIXED  MENU - HEADER
