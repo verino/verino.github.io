@@ -8,9 +8,9 @@
 
 $(function() {
 	/*Nicescroll*/
-	$("body").niceScroll({
-		cursorwidth:"10px"
-	});
+	// $("body").niceScroll({
+	// 	cursorwidth:"10px"
+	// });
 
 	/*Parallax*/
 	// $('.skills').parallax({
